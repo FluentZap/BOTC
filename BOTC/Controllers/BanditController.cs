@@ -31,8 +31,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
         [HttpGet("/Bandit/show/{id}")]
         public IActionResult Show(string id)
         {
-
-          return View();
+          return View(DB.GetBandit(id));
         }
 
         // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

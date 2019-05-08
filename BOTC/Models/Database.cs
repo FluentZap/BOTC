@@ -45,6 +45,27 @@ namespace BOTC
       return bandits;
     }
 
+    public static Bandit GetBandit(string banditId)
+    {
+      int id = int.Parse(banditId);
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM bandits INNER JOIN classes ON bandits.class_Id = classes.id WHERE bandits.id = @bandit_id;";
+      cmd.Parameters.AddWithValue("@bandit_id", id);
+      MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
+      rdr.Read();
+      Bandit bandit = new Bandit(rdr.GetInt32(0));
+      bandit.Name = rdr.GetString(1);
+      bandit.Stats.CurrentHealth = rdr.GetInt32(2);
+      bandit.Stats.Name = rdr.GetString(5);
+      bandit.Stats.TotalHealth = rdr.GetInt32(6);
+      bandit.Stats.Strength = rdr.GetInt32(7);
+      bandit.Stats.Dexterity = rdr.GetInt32(8);
+      DB.Close(conn);
+      return bandit;
+    }
+
     //Create Bandit
     public static string CreateBandit(string name, int classId)
     {
