@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BanditsOfTheCoast.Solution.Models;
+using BOTC;
 
 namespace BanditsOfTheCoast.Solution.Controllers
 {
@@ -12,7 +13,8 @@ namespace BanditsOfTheCoast.Solution.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+          List<Bandit> bandits = DB.GetAll();
+          return View(bandits);
         }
 
         public IActionResult New()
@@ -27,6 +29,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
 
         public IActionResult Show()
         {
+
           return View();
         }
 

@@ -23,8 +23,13 @@ using BanditsOfTheCoast.Solution.Models;
 
 #line default
 #line hidden
+#line 3 "/Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/Views/_ViewImports.cshtml"
+using BOTC;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"254ac060e09f9d05178fc289de1a7b547723d7a4", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb44914460cc29fc55d64ecb26e5d40af583ac8b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a00c9bc0fc9c89c9ef57e28daefbedce64f19a7e", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

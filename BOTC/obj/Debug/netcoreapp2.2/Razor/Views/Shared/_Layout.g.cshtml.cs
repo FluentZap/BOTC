@@ -23,8 +23,13 @@ using BanditsOfTheCoast.Solution.Models;
 
 #line default
 #line hidden
+#line 3 "/Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/Views/_ViewImports.cshtml"
+using BOTC;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb44914460cc29fc55d64ecb26e5d40af583ac8b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a00c9bc0fc9c89c9ef57e28daefbedce64f19a7e", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -91,7 +96,7 @@ using BanditsOfTheCoast.Solution.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(25, 1063, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde14969", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde15098", async() => {
                 BeginContext(31, 121, true);
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>");
                 EndContext();
@@ -106,12 +111,12 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral(" - BanditsOfTheCoast.Solution</title>\r\n    <link href=\"https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative|Raleway\" rel=\"stylesheet\">\r\n\r\n    ");
                 EndContext();
                 BeginContext(324, 136, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde15978", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde16107", async() => {
                     BeginContext(359, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(369, 71, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde16391", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde16520", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -147,12 +152,12 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(466, 507, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde18847", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde18976", async() => {
                     BeginContext(501, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(511, 442, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde19261", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde19390", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_LinkTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper>();
@@ -199,7 +204,7 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(979, 47, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde22873", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde23002", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -218,7 +223,7 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(1032, 47, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde24190", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde24319", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -252,12 +257,12 @@ using BanditsOfTheCoast.Solution.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1090, 2795, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde26291", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde26420", async() => {
                 BeginContext(1111, 187, true);
                 WriteLiteral("\r\n    <header>\r\n        <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3\">\r\n            <div class=\"container\">\r\n                ");
                 EndContext();
                 BeginContext(1298, 101, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde26868", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde26997", async() => {
                     BeginContext(1375, 20, true);
                     WriteLiteral("Bandits Of The Coast");
                     EndContext();
@@ -292,7 +297,7 @@ using BanditsOfTheCoast.Solution.Models;
                             ");
                 EndContext();
                 BeginContext(1950, 101, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde29406", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde29535", async() => {
                     BeginContext(2034, 13, true);
                     WriteLiteral("Create Bandit");
                     EndContext();
@@ -319,7 +324,7 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
                 EndContext();
                 BeginContext(2159, 94, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde31478", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde31607", async() => {
                     BeginContext(2245, 4, true);
                     WriteLiteral("Crew");
                     EndContext();
@@ -359,12 +364,12 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(2710, 193, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde34088", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde34217", async() => {
                     BeginContext(2745, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(2755, 51, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde34503", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde34632", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -382,7 +387,7 @@ using BanditsOfTheCoast.Solution.Models;
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(2816, 67, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde35819", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde35948", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -417,12 +422,12 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(2909, 849, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde38197", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde38326", async() => {
                     BeginContext(2944, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(2954, 340, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde38613", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde38742", async() => {
                         BeginContext(3275, 10, true);
                         WriteLiteral("\r\n        ");
                         EndContext();
@@ -450,7 +455,7 @@ using BanditsOfTheCoast.Solution.Models;
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(3304, 434, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde40799", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde40928", async() => {
                         BeginContext(3719, 10, true);
                         WriteLiteral("\r\n        ");
                         EndContext();
@@ -495,7 +500,7 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(3764, 62, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde44047", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e22d5c79cd9a43fb5b2b87474e3c5e7da0f5adde44176", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

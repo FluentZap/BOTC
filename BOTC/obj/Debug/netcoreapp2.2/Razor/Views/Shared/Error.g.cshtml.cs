@@ -23,8 +23,13 @@ using BanditsOfTheCoast.Solution.Models;
 
 #line default
 #line hidden
+#line 3 "/Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/Views/_ViewImports.cshtml"
+using BOTC;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb44914460cc29fc55d64ecb26e5d40af583ac8b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a00c9bc0fc9c89c9ef57e28daefbedce64f19a7e", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

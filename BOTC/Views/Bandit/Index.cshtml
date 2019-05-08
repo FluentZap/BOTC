@@ -1,8 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Crew Page";
 }
 
 <div class="splash-title">
-    <h1 class="display-4">BANDITS OF THE COAST</h1>
-    <h3>Bandit Roster:</h3>
+    <h1 class="display-4">Crew</h1>
+
+      @foreach(Bandit bandit in Model)
+      {
+        <p> @bandit.Name The
+        @if(bandit.Strength > 9)
+        {
+          <span>Mighty</span>
+        }
+        else
+        {
+          <span>Weak</span>
+        }
+        @bandit.ClassName
+        </p>
+      }
 </div>

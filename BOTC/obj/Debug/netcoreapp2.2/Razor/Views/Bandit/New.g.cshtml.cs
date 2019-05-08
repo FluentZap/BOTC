@@ -23,8 +23,13 @@ using BanditsOfTheCoast.Solution.Models;
 
 #line default
 #line hidden
+#line 3 "/Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/Views/_ViewImports.cshtml"
+using BOTC;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bec11c8aa32a03bfbf2a8bbfd759cd553f050bad", @"/Views/Bandit/New.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb44914460cc29fc55d64ecb26e5d40af583ac8b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a00c9bc0fc9c89c9ef57e28daefbedce64f19a7e", @"/Views/_ViewImports.cshtml")]
     public class Views_Bandit_New : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("selected", new global::Microsoft.AspNetCore.Html.HtmlString("selected"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -69,12 +74,12 @@ using BanditsOfTheCoast.Solution.Models;
             WriteLiteral("\n<div class=\"splash-title\">\n    <h1 class=\"display-4\">BANDITS OF THE COAST</h1>\n    <h3>Creat Bandit Form</h3>\n</div>\n");
             EndContext();
             BeginContext(160, 512, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad6138", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad6267", async() => {
                 BeginContext(224, 177, true);
                 WriteLiteral("\n  <label for=\"banditName\">Bandit Name</label>\n  <input type=\"text\" name=\"banditName\">\n  <label for=\"banditClass\">Bandit Name</label>\n  <select class=\"\" name=\"banditClass\">\n    ");
                 EndContext();
                 BeginContext(401, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad6706", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad6835", async() => {
                     BeginContext(450, 12, true);
                     WriteLiteral("Swashbuckler");
                     EndContext();
@@ -97,7 +102,7 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\n    ");
                 EndContext();
                 BeginContext(476, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad8240", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad8369", async() => {
                     BeginContext(501, 8, true);
                     WriteLiteral("Marauder");
                     EndContext();
@@ -119,7 +124,7 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\n    ");
                 EndContext();
                 BeginContext(523, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad9683", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad9812", async() => {
                     BeginContext(546, 6, true);
                     WriteLiteral("Mystic");
                     EndContext();
@@ -141,7 +146,7 @@ using BanditsOfTheCoast.Solution.Models;
                 WriteLiteral("\n    ");
                 EndContext();
                 BeginContext(566, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad11124", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bec11c8aa32a03bfbf2a8bbfd759cd553f050bad11253", async() => {
                     BeginContext(589, 6, true);
                     WriteLiteral("Marine");
                     EndContext();
