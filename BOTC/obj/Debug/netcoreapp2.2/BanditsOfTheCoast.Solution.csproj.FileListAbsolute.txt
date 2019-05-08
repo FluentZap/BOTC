@@ -29,3 +29,4 @@
 /Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/BanditsOfTheCoast.Solution.csproj.CopyComplete
 /Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/Bandit/Index.g.cshtml.cs
 /Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/Bandit/New.g.cshtml.cs
+/Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/Bandit/Show.g.cshtml.cs

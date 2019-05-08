@@ -20,6 +20,16 @@ namespace BanditsOfTheCoast.Solution.Controllers
             return View();
         }
 
+        public IActionResult Create()
+        {
+          return RedirectToAction("Show");
+        }
+
+        public IActionResult Show()
+        {
+          return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
