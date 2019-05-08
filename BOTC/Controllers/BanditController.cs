@@ -22,21 +22,23 @@ namespace BanditsOfTheCoast.Solution.Controllers
             return View();
         }
 
-        public IActionResult Create()
+        public IActionResult Create(string banditName, string banditClass)
         {
-          return RedirectToAction("Show");
+          string id = DB.CreateBandit(banditName, int.Parse(banditClass));
+          return RedirectToAction("Show", new { id = id });
         }
 
-        public IActionResult Show()
+        [HttpGet("/Bandit/show/{id}")]
+        public IActionResult Show(string id)
         {
 
           return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        // public IActionResult Error()
+        // {
+        //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        // }
     }
 }

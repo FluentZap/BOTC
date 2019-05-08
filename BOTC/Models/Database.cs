@@ -32,17 +32,51 @@ namespace BOTC
       MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
       while(rdr.Read())
       {
-        int Id = rdr.GetInt32(0);
-        string Name = rdr.GetString(1);
-        int CurrentHealth = rdr.GetInt32(2);
-        string ClassName = rdr.GetString(5);
-        int TotalHealth = rdr.GetInt32(6);
-        int Strength = rdr.GetInt32(7);
-        int Dexterity = rdr.GetInt32(8);
-        bandits.Add(new Bandit(Id, Name, ClassName, CurrentHealth, TotalHealth, Strength, Dexterity));
+        Bandit newBandit = new Bandit(rdr.GetInt32(0));
+        newBandit.Name = rdr.GetString(1);
+        newBandit.Stats.CurrentHealth = rdr.GetInt32(2);
+        newBandit.Stats.Name = rdr.GetString(5);
+        newBandit.Stats.TotalHealth = rdr.GetInt32(6);
+        newBandit.Stats.Strength = rdr.GetInt32(7);
+        newBandit.Stats.Dexterity = rdr.GetInt32(8);
+        bandits.Add(newBandit);
       }
       DB.Close(conn);
       return bandits;
+    }
+
+    //Create Bandit
+    public static string CreateBandit(string name, int classId)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"INSERT INTO bandits (name, currentHealth, class_id) VALUES (@name, @currentHealth, @classId);";
+      cmd.Parameters.AddWithValue("@name", name);
+      cmd.Parameters.AddWithValue("@currentHealth", GetClassStats(classId).CurrentHealth);
+      cmd.Parameters.AddWithValue("@classId", classId);
+      cmd.ExecuteNonQuery();
+      DB.Close(conn);
+      return cmd.LastInsertedId.ToString();
+    }
+
+    public static ClassStats GetClassStats(int classId)
+    {
+      ClassStats stats = new ClassStats();
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM classes WHERE id = @class_id;";
+      cmd.Parameters.AddWithValue("@class_id", classId);
+      MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
+      rdr.Read();
+      stats.Name = rdr.GetString(1);
+      stats.TotalHealth = rdr.GetInt32(2);
+      stats.Strength = rdr.GetInt32(3);
+      stats.Dexterity = rdr.GetInt32(4);
+
+      DB.Close(conn);
+      return stats;
     }
 
   }

@@ -8,7 +8,7 @@
       @foreach(Bandit bandit in Model)
       {
         <p> @bandit.Name The
-        @if(bandit.Strength > 9)
+        @if(bandit.Stats.Strength > 9)
         {
           <span>Mighty</span>
         }
@@ -16,7 +16,7 @@
         {
           <span>Weak</span>
         }
-        @bandit.ClassName
+        @bandit.Stats.Name
         </p>
       }
 </div>

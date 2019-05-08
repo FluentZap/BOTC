@@ -1,21 +1,26 @@
 @{
-    ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Home Page";
 }
 
 <div class="splash-title">
-    <h1 class="display-4">BANDITS OF THE COAST</h1>
-    <h3>Creat Bandit Form</h3>
+  <h1 class="display-4">BANDITS OF THE COAST</h1>
+  <h3>Creat Bandit Form</h3>
 </div>
 <form asp-controller="Bandit" asp-action="Create" method="post">
-  <label for="banditName">Bandit Name</label>
-  <input type="text" name="banditName">
-  <label for="banditClass">Bandit Name</label>
-  <select class="" name="banditClass">
-    <option selected="selected" value="swashbuckler">Swashbuckler</option>
-    <option value="maruader">Marauder</option>
-    <option value="mystic">Mystic</option>
-    <option value="marine">Marine</option>
-  </select>
+  <div class="">
+    <label for="banditName">Bandit Name</label>
+    <input type="text" name="banditName">
+  </div>
+  <div class="">
+
+    <label for="banditClass">Bandit Name</label>
+    <select class="" name="banditClass">
+      <option selected="selected" value="1">Swashbuckler</option>
+      <option value="2">Marauder</option>
+      <option value="3">Mystic</option>
+      <option value="4">Marine</option>
+    </select>
+  </div>
 
   <button type="submit">Create Bandit</button>
 </form>
