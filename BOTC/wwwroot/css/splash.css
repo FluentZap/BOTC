@@ -1,0 +1,16 @@
+.splash {
+  background-image: url("../img/stormboat.jpg");
+  height: 100%;
+  position: relative;
+opacity: 0.65;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+}
+
+.splash-title {
+  margin: 15% 5%;
+  position: relative;
+}
