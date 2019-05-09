@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "User Page";
+}
+
+<div class="splash-title">
+    <h1 class="display-4">BANDITS OF THE COAST</h1>
+    <h3>A character creation app for the upcoming rpg classic</h3>
+    <p>Create New User Account</p>
+
+    <form id="userForm"asp-controller="User" asp-action="Update" method="post">
+      <div class="">
+        <label for="userName">User Name</label>
+        <input type="text" name="userName">
+      </div>
+      <div class="">
+        <label for="password">Password</label>
+        <input type="password" name="password">
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <a class="nav-link text-light" asp-area="" asp-controller="User" asp-action="Create">Create New User</a>
+
+</div>

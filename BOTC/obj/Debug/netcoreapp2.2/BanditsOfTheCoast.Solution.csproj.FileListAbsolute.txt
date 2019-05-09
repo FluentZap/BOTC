@@ -31,3 +31,6 @@
 /Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/Item/Index.g.cshtml.cs
 /Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/Item/New.g.cshtml.cs
 /Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/Item/Show.g.cshtml.cs
+/Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/User/Index.g.cshtml.cs
+/Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/User/Login.g.cshtml.cs
+/Users/Guest/Desktop/BanditsOfTheCoast.Solution/BOTC/obj/Debug/netcoreapp2.2/Razor/Views/User/New.g.cshtml.cs

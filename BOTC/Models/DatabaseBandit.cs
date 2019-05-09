@@ -21,10 +21,10 @@ namespace BOTC
         Bandit newBandit = new Bandit(rdr.GetInt32(0));
         newBandit.Name = rdr.GetString(1);
         newBandit.Stats.CurrentHealth = rdr.GetInt32(2);
-        newBandit.Stats.Name = rdr.GetString(5);
-        newBandit.Stats.TotalHealth = rdr.GetInt32(6);
-        newBandit.Stats.Strength = rdr.GetInt32(7);
-        newBandit.Stats.Dexterity = rdr.GetInt32(8);
+        newBandit.Stats.Name = rdr.GetString(6);
+        newBandit.Stats.TotalHealth = rdr.GetInt32(7);
+        newBandit.Stats.Strength = rdr.GetInt32(8);
+        newBandit.Stats.Dexterity = rdr.GetInt32(9);
         bandits.Add(newBandit);
       }
       DB.Close(conn);
@@ -44,10 +44,10 @@ namespace BOTC
       Bandit bandit = new Bandit(rdr.GetInt32(0));
       bandit.Name = rdr.GetString(1);
       bandit.Stats.CurrentHealth = rdr.GetInt32(2);
-      bandit.Stats.Name = rdr.GetString(5);
-      bandit.Stats.TotalHealth = rdr.GetInt32(6);
-      bandit.Stats.Strength = rdr.GetInt32(7);
-      bandit.Stats.Dexterity = rdr.GetInt32(8);
+      bandit.Stats.Name = rdr.GetString(6);
+      bandit.Stats.TotalHealth = rdr.GetInt32(7);
+      bandit.Stats.Strength = rdr.GetInt32(8);
+      bandit.Stats.Dexterity = rdr.GetInt32(9);
       DB.Close(conn);
       return bandit;
     }

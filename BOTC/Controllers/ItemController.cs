@@ -13,17 +13,23 @@ namespace BanditsOfTheCoast.Solution.Controllers
     {
         public IActionResult Index()
         {
+          User user = IdCheck.Check(HttpContext.Session.Id);
+          if (user == null) return RedirectToAction("Index", "User");
           List<ItemStats> items = DB.GetAllItemStats();
           return View(items);
         }
 
         public IActionResult New()
         {
-            return View();
+          User user = IdCheck.Check(HttpContext.Session.Id);
+          if (user == null) return RedirectToAction("Index", "User");
+          return View();
         }
 
         public IActionResult Create(string type, string itemName, string speed, string damageDie, string damageType, string attackRange)
         {
+          User user = IdCheck.Check(HttpContext.Session.Id);
+          if (user == null) return RedirectToAction("Index", "User");
           ItemStats item = new ItemStats();
           item.Type = type;
           item.Name = itemName;
@@ -39,11 +45,15 @@ namespace BanditsOfTheCoast.Solution.Controllers
         [HttpGet("/item/show/{id}")]
         public IActionResult Show(string id)
         {
+          User user = IdCheck.Check(HttpContext.Session.Id);
+          if (user == null) return RedirectToAction("Index", "User");
           return View(DB.GetItemStats(id));
         }
 
         public IActionResult Destroy(string itemId)
         {
+          User user = IdCheck.Check(HttpContext.Session.Id);
+          if (user == null) return RedirectToAction("Index", "User");
           DB.DeleteItem(itemId);
           return RedirectToAction("Index");
         }
