@@ -2,6 +2,19 @@
     ViewData["Title"] = "User Page";
 }
 
+@if(Model == 1)
+{
+  <h2>Please Login</h2>
+}
+@if(Model == 2)
+{
+  <h2>User Already Made</h2>
+}
+@if(Model == 3)
+{
+  <h2>Incorrect Password</h2>
+}
+
 <div class="splash-title">
     <h1 class="display-4">BANDITS OF THE COAST</h1>
     <h3>A character creation app for the upcoming rpg classic</h3>

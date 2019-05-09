@@ -27,13 +27,13 @@ namespace BanditsOfTheCoast.Solution.Controllers
     public class UserController : Controller
     {
 
-        public IActionResult Index()
+        public IActionResult Index(int errorcode)
         {
           //ISession.SetInt32(HttpContext.Session, "Id", 87098734);
           Byte[] item = new Byte[7] {0, 2, 7, 3, 9, 9, 6};
           HttpContext.Session.Set("Id", item);
           string name = HttpContext.Session.Id;
-          return View("Index", name);
+          return View(errorcode);
         }
 
         public IActionResult New()
@@ -50,7 +50,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
           }
           else
           {
-            return RedirectToAction("Index", new {errorcode = 1});
+            return RedirectToAction("Index", new {errorcode = 2});
           }
         }
 
@@ -71,7 +71,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
             }
             else
             {
-              return RedirectToAction("Index", new {errorcode = 2});
+              return RedirectToAction("Index", new {errorcode = 3});
             }
           }
           return RedirectToAction("Index", new {errorcode = 2});
