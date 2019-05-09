@@ -1,4 +1,4 @@
-//﻿using System;
+﻿using System;
 using System.Collections.Generic;
 // using System.Linq;
 // using System.Threading.Tasks;
@@ -30,6 +30,16 @@ namespace BanditsOfTheCoast.Solution
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromSeconds(5);
+                options.Cookie.HttpOnly = true;
+                // Make the session cookie essential
+                options.Cookie.IsEssential = true;
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -48,6 +58,7 @@ namespace BanditsOfTheCoast.Solution
 
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

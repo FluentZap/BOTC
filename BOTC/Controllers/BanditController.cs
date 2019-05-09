@@ -19,7 +19,9 @@ namespace BanditsOfTheCoast.Solution.Controllers
 
         public IActionResult New()
         {
-            return View();
+          Byte[] dataOut;
+          HttpContext.Session.TryGetValue("Id", out dataOut);
+          return View("New", dataOut);
         }
 
         public IActionResult Create(string banditName, string banditClass)
