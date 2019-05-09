@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+<div class="splash-title">
+  <h1 class="display-4">BANDITS OF THE COAST</h1>
+  <h3>Create Item Form</h3>
+</div>
+<form id="weaponForm"asp-controller="Item" asp-action="Create" method="post">
+  <input type="hidden" name="type" value="weapon">
+  <div class="">
+    <label for="itemName">Weapon Name</label>
+    <input type="text" name="itemName">
+  </div>
+  <div class="">
+    <label for="speed">Speed</label>
+    <input type="text" name="speed">
+  </div>
+  <div class="">
+    <label for="damageDie">DamageDie</label>
+    <input type="text" name="damageDie">
+  </div>
+  <div class="">
+    <label for="damageType">Damage Type</label>
+    <input type="text" name="damageType">
+  </div>
+  <div class="">
+    <label for="attackRange">Attack Range</label>
+    <input type="text" name="attackRange">
+  </div>
+
+  <button type="submit">Forge Item</button>
+</form>

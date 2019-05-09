@@ -25,3 +25,4 @@ namespace BanditsOfTheCoast.Solution
                 .UseStartup<Startup>();
     }
 }
+//Start Remote  --urls http://0.0.0.0:5001

@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="splash-title">
+    <h1 class="display-4">BANDITS OF THE COAST</h1>
+    <h3>@Model.Name</h3>
+    <p>@Model.Type</p>
+    <p>@Model.Speed</p>
+    <p>@Model.DamageDie</p>
+    <p>@Model.DamageType</p>
+    <p>@Model.AttackRange</p>
+</div>
+
+<form asp-controller="Item" asp-action="Destroy" method="post">
+  <input type="hidden" name="itemId" value="@Model.Id">
+
+  <button type="submit">Delete Item</button>
+</form>
+      <a class="nav-link text-light" asp-area="" asp-controller="Item" asp-action="Index">Item Index</a>
+@* https://www.moddb.com/games/baldurs-gate-enhanced-edition/addons/super-ultimate-portrait-pack-zip *@
