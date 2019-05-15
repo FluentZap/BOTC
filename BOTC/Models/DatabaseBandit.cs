@@ -29,42 +29,28 @@ namespace BOTC
       }
     }
  
-    // //Create Bandit
-    public static string CreateBandit(string name, int classId)
+    // //CreateBandit saves new bandit to db
+    public static string CreateBandit(string name, string sessionId, int classId)
     {
-
-      
-      // MySqlConnection conn = DB.Connection();
-      // conn.Open();
-      // MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-      // cmd.CommandText = @"INSERT INTO bandits (name, currentHealth, class_id) VALUES (@name, @currentHealth, @classId);";
-      // cmd.Parameters.AddWithValue("@name", name);
-      // cmd.Parameters.AddWithValue("@currentHealth", GetClasses(classId).CurrentHealth);
-      // cmd.Parameters.AddWithValue("@classId", classId);
-      // cmd.ExecuteNonQuery();
-      // DB.Close(conn);
-      return cmd.LastInsertedId.ToString();
+      using (var db = new BOTCContext())
+      {
+        Classes banditClass = db.Classes.Where(c => c.Id == classId) as Classes;
+        User user = db.User.Where(u => u.SessionId == sessionId) as User;
+        Bandit bandit = new Bandit() {Name = name, CurrentHealth = 100, User = user, Class = banditClass};
+        db.Bandit.Add(bandit);
+        db.SaveChanges();
+        return bandit.Id.ToString();
+      }
     }
-    //
-    // public static Classes GetClasses(int classId)
-    // {
-    //   Classes stats = new Classes();
-    //   MySqlConnection conn = DB.Connection();
-    //   conn.Open();
-    //   MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-    //   cmd.CommandText = @"SELECT * FROM classes WHERE id = @class_id;";
-    //   cmd.Parameters.AddWithValue("@class_id", classId);
-    //   MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
-    //   rdr.Read();
-    //   stats.Name = rdr.GetString(1);
-    //   stats.TotalHealth = rdr.GetInt32(2);
-    //   stats.Strength = rdr.GetInt32(3);
-    //   stats.Dexterity = rdr.GetInt32(4);
-    //
-    //   DB.Close(conn);
-    //   return stats;
-    // }
-
+    
+    public static Classes GetClasses(int classId)
+    {
+      using(var db = new BOTCContext())
+      {
+      var banditClass = db.Classes.Where(c => c.Id == classId) as Classes;
+      return banditClass;
+      }
+    }
   }
 
 }

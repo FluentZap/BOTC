@@ -15,10 +15,12 @@ namespace BOTC
       Class = new Classes();
       Id = id;
     }
+    
+
+    public Bandit()
+    {}
 
   }
-
-
   public class Classes
   {
     public int Id {get; set;}
