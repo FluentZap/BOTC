@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace BOTC
@@ -13,8 +14,8 @@ namespace BOTC
     {
       using(var db = new BOTCContext())
       {
-        var bandits = db.Bandit.ToList();
-      return bandits;
+        var bandits = db.Bandit.Include("Class").ToList();
+        return bandits;
       }
     }
 
@@ -27,7 +28,7 @@ namespace BOTC
       return bandit;
       }
     }
- 
+
     // //CreateBandit saves new bandit to db
     public static string CreateBandit(string name, string sessionId, int classId)
     {
@@ -41,7 +42,7 @@ namespace BOTC
         return bandit.Id.ToString();
       }
     }
-    
+
     public static Classes GetClasses(int classId)
     {
       using(var db = new BOTCContext())

@@ -8,7 +8,7 @@
       @foreach(Bandit bandit in Model)
       {
         <p><a asp-controller="Bandit" asp-action="Show" asp-route-id="@bandit.Id"> @bandit.Name The
-        @if(bandit.Class.Strength > 9)
+       @if(bandit.Class.Strength > 9)
         {
           <span>Mighty</span>
         }
@@ -18,5 +18,6 @@
         }
         @bandit.Class.Name
         </a></p>
+
       }
 </div>
