@@ -21,8 +21,6 @@ namespace BOTC
     {}
 
   }
-
-
   public class Classes
   {
     public int Id {get; set;}
