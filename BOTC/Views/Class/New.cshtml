@@ -1,0 +1,32 @@
+@{
+  ViewData["Title"] = "New Class";
+}
+
+<div class="splash-title">
+  <h1 class="display-4">BANDITS OF THE COAST</h1>
+  <h3>Creat Class Form</h3>
+</div>
+
+<form asp-controller="class" asp-action="Create" method="post">
+  <div class="">
+    <label for="className">Class Name</label>
+    <input type="text" name="className">
+  </div>
+   <div class="">
+    <label for="totalHealth">Total Health</label>
+    <input type="text" name="totalHealth">
+  </div>
+    <div class="">
+    <label for="currentHealth">Current Health</label>
+    <input type="text" name="currentHealth">
+  </div>
+    <div class="">
+    <label for="strength">Strength</label>
+    <input type="text" name="strength">
+  </div>
+    <div class="">
+    <label for="dexterity">Dexterity</label>
+    <input type="text" name="dexterity">
+  </div>
+  <button type="submit">Create Class Type</button>
+</form>

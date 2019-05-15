@@ -1,0 +1,13 @@
+<!-- class/index.cshtml -->
+@{
+    ViewData["Title"] = "Class Types";
+}
+
+<div class="splash-title">
+    <h1 class="display-4">Classes</h1>
+
+      @foreach(Classes classType in Model)
+      {
+        <p><a asp-controller="Bandit" asp-action="Show" asp-route-id="@classType.Id"> @classType.Name</a></p>
+      }
+</div>
