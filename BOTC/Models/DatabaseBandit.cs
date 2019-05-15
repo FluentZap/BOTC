@@ -11,7 +11,6 @@ namespace BOTC
     //Database Calls
     public static List<Bandit> GetAll()
     {
-
       using(var db = new BOTCContext())
       {
         var bandits = db.Bandit.ToList();
