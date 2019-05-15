@@ -1,2 +1,6 @@
 bin/
 obj/
+.vs/
+.vscode/
+Properties/
+/BOTC/BanditsOfTheCoast.Solution.csproj.user
