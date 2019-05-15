@@ -5,20 +5,23 @@ namespace BOTC
   public class Bandit
   {
     public string Name {get; set;}
-    public int Id {get;}
-    public ClassStats Stats {get; set;}
+    public int Id {get; set;}
+    public int CurrentHealth {get; set;}
+    public User User {get;set;}
+    public Classes Class{get; set;}
 
     public Bandit(int id)
     {
-      Stats = new ClassStats();
+      Class = new Classes();
       Id = id;
     }
 
   }
 
 
-  public class ClassStats
+  public class Classes
   {
+    public int Id {get; set;}
     public string Name {get; set;}
     public int TotalHealth {get; set;}
     public int CurrentHealth {get; set;}
