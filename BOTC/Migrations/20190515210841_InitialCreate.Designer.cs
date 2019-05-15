@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BanditsOfTheCoast.Solution.Migrations
 {
     [DbContext(typeof(BOTCContext))]
-    [Migration("20190515171415_InitialCreate")]
+    [Migration("20190515210841_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,8 +90,6 @@ namespace BanditsOfTheCoast.Solution.Migrations
                     b.Property<string>("Name");
 
                     b.Property<string>("Type");
-
-                    b.Property<int>("Type_Id");
 
                     b.HasKey("Id");
 

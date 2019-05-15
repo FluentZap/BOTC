@@ -89,8 +89,6 @@ namespace BanditsOfTheCoast.Solution.Migrations
 
                     b.Property<string>("Type");
 
-                    b.Property<int>("Type_Id");
-
                     b.HasKey("Id");
 
                     b.ToTable("Item");

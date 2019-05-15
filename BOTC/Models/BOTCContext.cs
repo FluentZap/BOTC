@@ -6,21 +6,20 @@ using System.Linq;
 namespace BOTC
 {
 
-    public class BOTCContext : DbContext
+  public class BOTCContext : DbContext
+  {
+    public DbSet<Bandit> Bandit { get; set; }
+    public DbSet<Classes> Classes{ get; set; }
+    public DbSet<User> User { get; set; }
+    public DbSet<Inventory> Inventory { get; set; }
+    public DbSet<Item> Item { get; set; }
+    public DbSet<Weapon> Weapon { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        public DbSet<Bandit> Bandit { get; set; }
-        public DbSet<Classes> Classes { get; set; }
-        public DbSet<User> User { get; set; }
-        public DbSet<Inventory> Inventory { get; set; }
-        public DbSet<Item> Item { get; set; }
-        public DbSet<Weapon> Weapon { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //optionsBuilder.UseMySQL("server=localhost;database=botc;user=root;password=root;port=8889;");
-            optionsBuilder.UseMySQL("server=localhost;database=botc;user=root;password=root;port=3306;");
-        }
-
+      optionsBuilder.UseMySQL("server=localhost;database=botc;user=root;password=root;port=8889;");
     }
+
+  }
 
 }

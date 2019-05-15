@@ -30,7 +30,6 @@ namespace BanditsOfTheCoast.Solution.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySQL:AutoIncrement", true),
                     Type = table.Column<string>(nullable: true),
-                    Type_Id = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Cost = table.Column<int>(nullable: false)
                 },

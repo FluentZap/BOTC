@@ -5,7 +5,6 @@ namespace BOTC
   {
     public int Id {get; set;}
     public string Type {get; set;}
-    public int Type_Id {get; set;}
     public string Name {get; set;}
     public int Cost {get; set;}
   }
