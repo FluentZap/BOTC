@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
@@ -24,7 +23,7 @@ namespace BOTC
         {
             using (var db = new BOTCContext())
             {
-                var item = db.Item.Where(b => b.Id == int.Parse(itemId)) as Item;
+                var item = db.Item.Where(b => b.Id == int.Parse(itemId)).FirstOrDefault();
                 return item;
             }
         }
@@ -42,7 +41,7 @@ namespace BOTC
         {
             using (var db = new BOTCContext())
             {
-                var item = db.Item.Where(b => b.Id == int.Parse(itemId)) as Item;
+                var item = db.Item.Where(b => b.Id == int.Parse(itemId)).FirstOrDefault();
                 db.Remove(item);
             }
         }
