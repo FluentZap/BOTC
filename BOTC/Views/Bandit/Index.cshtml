@@ -1,4 +1,4 @@
-﻿@* @{
+﻿@{
     ViewData["Title"] = "Crew Page";
 }
 
@@ -8,7 +8,7 @@
       @foreach(Bandit bandit in Model)
       {
         <p><a asp-controller="Bandit" asp-action="Show" asp-route-id="@bandit.Id"> @bandit.Name The
-        @if(bandit.Stats.Strength > 9)
+        @if(bandit.Class.Strength > 9)
         {
           <span>Mighty</span>
         }
@@ -16,7 +16,7 @@
         {
           <span>Weak</span>
         }
-        @bandit.Stats.Name
+        @bandit.Class.Name
         </a></p>
       }
-</div> *@
+</div>

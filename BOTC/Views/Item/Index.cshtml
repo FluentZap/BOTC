@@ -1,15 +1,15 @@
-@* /* @{
+@{
     ViewData["Title"] = "Item Page";
 }
 
 <div class="splash-title">
     <h1 class="display-4">BOTC Items:</h1>
 
-      @foreach(ItemStats item in Model)
+      @foreach(Item item in Model)
       {
         <p><a asp-controller="Item" asp-action="Show" asp-route-id="@item.Id">@item.Type: @item.Name</a></p>
       }
 
       <a class="nav-link text-light" asp-area="" asp-controller="Item" asp-action="New">Forge Item</a>
 
-</div> */ *@
+</div>

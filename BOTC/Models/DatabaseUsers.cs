@@ -21,7 +21,7 @@ namespace BOTC
         {
             using (var db = new BOTCContext())
             {
-                var user = db.User.Where(b => b.SessionId == sessionId);
+                var user = db.User.Where(b => b.SessionId == sessionId).FirstOrDefault();
                 return user != null;
             }
         }
@@ -30,7 +30,7 @@ namespace BOTC
         {
             using (var db = new BOTCContext())
             {
-                var user = db.User.Where(b => b.UserName == userName);
+                var user = db.User.Where(b => b.UserName == userName).FirstOrDefault();
                 return user != null;
             }
         }
@@ -39,7 +39,7 @@ namespace BOTC
         {
             using (var db = new BOTCContext())
             {
-                var user = db.User.Where(b => b.SessionId == sessionId) as User;
+                var user = db.User.Where(b => b.SessionId == sessionId).FirstOrDefault();
                 return user;
             }
         }
@@ -48,7 +48,7 @@ namespace BOTC
         {
             using (var db = new BOTCContext())
             {
-                var user = db.User.Where(b => b.UserName == userName) as User;
+                User user = db.User.Where(b => b.UserName == userName).FirstOrDefault();
                 return user;
             }
         }
@@ -57,10 +57,10 @@ namespace BOTC
         {
             using (var db = new BOTCContext())
             {
-                var user = db.User.Where(b => b.UserName == userName) as User;
+                var user = db.User.Where(b => b.UserName == userName).FirstOrDefault();
                 user.SessionId = sessionId;
                 db.SaveChanges();
-            }           
+            }
         }
 
         public static bool UserLogIn(string userName, string password, string sessionId)
