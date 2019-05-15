@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using System.Linq;
 
 namespace BOTC
 {
@@ -13,66 +14,37 @@ namespace BOTC
 
       using(var db = new BOTCContext())
       {
-        var bandits = db.Bandit
-            .ToList();
+        var bandits = db.Bandit.ToList();
+      return bandits;
       }
+    }
 
-      // List<Bandit> bandits = new List<Bandit>{};
+    public static Bandit GetBandit(string banditId)
+    {
+      int id = int.Parse(banditId);
+      using(var db = new BOTCContext())
+      {
+      var bandit = db.Bandit.Where(b => b.Id == id) as Bandit;
+      return bandit;
+      }
+    }
+ 
+    // //Create Bandit
+    public static string CreateBandit(string name, int classId)
+    {
+
+      
       // MySqlConnection conn = DB.Connection();
       // conn.Open();
       // MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-      // cmd.CommandText = @"SELECT * FROM bandits INNER JOIN classes ON bandits.class_Id = classes.id;";
-      // MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
-      // while(rdr.Read())
-      // {
-      //   Bandit newBandit = new Bandit(rdr.GetInt32(0));
-      //   newBandit.Name = rdr.GetString(1);
-      //   newBandit.Class_Id.CurrentHealth = rdr.GetInt32(2);
-      //   newBandit.Class_Id.Name = rdr.GetString(6);
-      //   newBandit.Class_Id.TotalHealth = rdr.GetInt32(7);
-      //   newBandit.Class_Id.Strength = rdr.GetInt32(8);
-      //   newBandit.Class_Id.Dexterity = rdr.GetInt32(9);
-      //   bandits.Add(newBandit);
-      // }
+      // cmd.CommandText = @"INSERT INTO bandits (name, currentHealth, class_id) VALUES (@name, @currentHealth, @classId);";
+      // cmd.Parameters.AddWithValue("@name", name);
+      // cmd.Parameters.AddWithValue("@currentHealth", GetClasses(classId).CurrentHealth);
+      // cmd.Parameters.AddWithValue("@classId", classId);
+      // cmd.ExecuteNonQuery();
       // DB.Close(conn);
-      return bandits;
+      return cmd.LastInsertedId.ToString();
     }
-
-    // public static Bandit GetBandit(string banditId)
-    // {
-    //   int id = int.Parse(banditId);
-    //   MySqlConnection conn = DB.Connection();
-    //   conn.Open();
-    //   MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-    //   cmd.CommandText = @"SELECT * FROM bandits INNER JOIN classes ON bandits.class_Id = classes.id WHERE bandits.id = @bandit_id;";
-    //   cmd.Parameters.AddWithValue("@bandit_id", id);
-    //   MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
-    //   rdr.Read();
-    //   Bandit bandit = new Bandit(rdr.GetInt32(0));
-    //   bandit.Name = rdr.GetString(1);
-    //   bandit.Class_Id.CurrentHealth = rdr.GetInt32(2);
-    //   bandit.Class_Id.Name = rdr.GetString(6);
-    //   bandit.Class_Id.TotalHealth = rdr.GetInt32(7);
-    //   bandit.Class_Id.Strength = rdr.GetInt32(8);
-    //   bandit.Class_Id.Dexterity = rdr.GetInt32(9);
-    //   DB.Close(conn);
-    //   return bandit;
-    // }
-    //
-    // //Create Bandit
-    // public static string CreateBandit(string name, int classId)
-    // {
-    //   MySqlConnection conn = DB.Connection();
-    //   conn.Open();
-    //   MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-    //   cmd.CommandText = @"INSERT INTO bandits (name, currentHealth, class_id) VALUES (@name, @currentHealth, @classId);";
-    //   cmd.Parameters.AddWithValue("@name", name);
-    //   cmd.Parameters.AddWithValue("@currentHealth", GetClasses(classId).CurrentHealth);
-    //   cmd.Parameters.AddWithValue("@classId", classId);
-    //   cmd.ExecuteNonQuery();
-    //   DB.Close(conn);
-    //   return cmd.LastInsertedId.ToString();
-    // }
     //
     // public static Classes GetClasses(int classId)
     // {
