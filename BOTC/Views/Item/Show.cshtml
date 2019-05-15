@@ -4,16 +4,16 @@
 
 <div class="splash-title">
     <h1 class="display-4">BANDITS OF THE COAST</h1>
-    <h3>@Model.Name</h3>
-    <p>@Model.Type</p>
-    <p>@Model.Speed</p>
-    <p>@Model.DamageDie</p>
-    <p>@Model.DamageType</p>
-    <p>@Model.AttackRange</p>
+    <h3>@ViewBag.Item.Name</h3>
+    <p>@ViewBag.Item.Type</p>
+    <p>@ViewBag.ItemStats.Speed</p>
+    <p>@ViewBag.ItemStats.DamageDie</p>
+    <p>@ViewBag.ItemStats.DamageType</p>
+    <p>@ViewBag.ItemStats.AttackRange</p>
 </div>
 
 <form asp-controller="Item" asp-action="Destroy" method="post">
-  <input type="hidden" name="itemId" value="@Model.Id">
+  <input type="hidden" name="itemId" value="@ViewBag.Item.Id">
 
   <button type="submit">Delete Item</button>
 </form>

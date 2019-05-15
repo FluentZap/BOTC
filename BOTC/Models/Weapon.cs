@@ -9,10 +9,5 @@ namespace BOTC
     public int DamageDie {get; set;}
     public string DamageType {get; set;}
     public int AttackRange {get; set;}
-
-    public Weapon(int id)
-    {
-      Id = id;
-    }
   }
 }
