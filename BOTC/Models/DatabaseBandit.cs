@@ -8,14 +8,14 @@ namespace BOTC
   {
 
     //Database Calls
-    public static List<Bandit> GetAll()
-    {
+    //public static List<Bandit> GetAll()
+    //{
 
-      using(var db = new BOTCContext())
-      {
-        var bandits = db.Bandit
-            .ToList();
-      }
+      //using(var db = new BOTCContext())
+      //{
+        //var bandits = db.Bandit
+            //.ToList();
+      //}
 
       // List<Bandit> bandits = new List<Bandit>{};
       // MySqlConnection conn = DB.Connection();
@@ -35,8 +35,8 @@ namespace BOTC
       //   bandits.Add(newBandit);
       // }
       // DB.Close(conn);
-      return bandits;
-    }
+      //return bandits;
+    //}
 
     // public static Bandit GetBandit(string banditId)
     // {
