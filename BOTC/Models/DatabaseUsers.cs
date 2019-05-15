@@ -21,7 +21,7 @@ namespace BOTC
         {
             using (var db = new BOTCContext())
             {
-                var user = db.User.Where(b => b.SessionId == sessionId);
+                var user = db.User.Where(b => b.SessionId == sessionId).FirstOrDefault();
                 return user != null;
             }
         }

@@ -23,7 +23,7 @@ namespace BOTC
       int id = int.Parse(banditId);
       using(var db = new BOTCContext())
       {
-      var bandit = db.Bandit.Where(b => b.Id == id) as Bandit;
+      var bandit = db.Bandit.Where(b => b.Id == id).FirstOrDefault();
       return bandit;
       }
     }
@@ -34,7 +34,7 @@ namespace BOTC
       using (var db = new BOTCContext())
       {
         Classes banditClass = db.Classes.Where(c => c.Id == classId) as Classes;
-        User user = db.User.Where(u => u.SessionId == sessionId) as User;
+        User user = db.User.Where(u => u.SessionId == sessionId).FirstOrDefault();
         Bandit bandit = new Bandit() {Name = name, CurrentHealth = 100, User = user, Class = banditClass};
         db.Bandit.Add(bandit);
         db.SaveChanges();
@@ -46,7 +46,7 @@ namespace BOTC
     {
       using(var db = new BOTCContext())
       {
-      var banditClass = db.Classes.Where(c => c.Id == classId) as Classes;
+      var banditClass = db.Classes.Where(c => c.Id == classId).FirstOrDefault();
       return banditClass;
       }
     }
