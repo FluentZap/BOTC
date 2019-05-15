@@ -33,7 +33,21 @@ namespace BOTC
     public static string CreateBandit(string name, int classId)
     {
 
-      
+      using (var db = new BloggingContext())
+      {
+          var blog = new Blog { Url = "http://sample.com" };
+          db.Blogs.Add(blog);
+          db.SaveChanges();
+      }
+
+      using (var db = new BOTCContext())
+      {
+        Bandit bandit = new Bandit {Name = name, CurrentHealth = 100, UserId = 1, ClassId = classId};
+        db.Bandit.Add(bandit);
+        db.SaveChanges();
+        return bandit.Id.ToString();
+      }
+
       // MySqlConnection conn = DB.Connection();
       // conn.Open();
       // MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
@@ -43,7 +57,6 @@ namespace BOTC
       // cmd.Parameters.AddWithValue("@classId", classId);
       // cmd.ExecuteNonQuery();
       // DB.Close(conn);
-      return cmd.LastInsertedId.ToString();
     }
     //
     // public static Classes GetClasses(int classId)
