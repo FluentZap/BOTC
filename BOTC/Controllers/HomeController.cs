@@ -11,24 +11,24 @@ namespace BanditsOfTheCoast.Solution.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-          //ISession.SetInt32(HttpContext.Session, "Id", 87098734);
-          Byte[] item = new Byte[7] {0, 2, 7, 3, 9, 9, 6};
-          HttpContext.Session.Set("Id", item);
-          string name = HttpContext.Session.Id;
-          return View("Index", name);
-        }
-
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        // public IActionResult Error()
+        // public IActionResult Index()
         // {
-        //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        //   //ISession.SetInt32(HttpContext.Session, "Id", 87098734);
+        //   Byte[] item = new Byte[7] {0, 2, 7, 3, 9, 9, 6};
+        //   HttpContext.Session.Set("Id", item);
+        //   string name = HttpContext.Session.Id;
+        //   return View("Index", name);
         // }
+        //
+        // public IActionResult Create()
+        // {
+        //     return View();
+        // }
+        //
+        // // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        // // public IActionResult Error()
+        // // {
+        // //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        // // }
     }
 }

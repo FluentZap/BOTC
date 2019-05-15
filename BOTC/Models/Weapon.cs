@@ -4,8 +4,7 @@ namespace BOTC
 {
   public class Weapon
   {
-    public string Name {get; set;}
-    public int Id {get;}
+    public int Id {get; set;}
     public int Speed {get; set;}
     public int DamageDie {get; set;}
     public string DamageType {get; set;}
@@ -15,9 +14,5 @@ namespace BOTC
     {
       Id = id;
     }
-    public Weapon() { }
-
   }
-
-
 }

@@ -8,6 +8,4 @@ namespace BOTC
     public string SessionId {get; set;}
     public string Privileges { get; set;}
   }
-
-
 }
