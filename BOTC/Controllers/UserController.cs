@@ -30,6 +30,11 @@ namespace BanditsOfTheCoast.Solution.Controllers
     {
       //ISession.SetInt32(HttpContext.Session, "Id", 87098734);
       string name = HttpContext.Session.Id;
+      var user = DB.GetUser(HttpContext.Session.Id);
+      if(user != null)
+      {
+        ViewBag.UserTitle = user.UserName;
+      }
       return View(errorcode);
     }
 
@@ -83,6 +88,13 @@ namespace BanditsOfTheCoast.Solution.Controllers
         }
       }
       return RedirectToAction("Index", new {errorcode = 2});
+    }
+
+    public IActionResult Destroy()
+    {
+      var user = DB.GetUser(HttpContext.Session.Id);
+      DB.UpdateUserSessionId(user.UserName, "");
+      return RedirectToAction("Index", "Home");
     }
   }
 }

@@ -83,7 +83,5 @@ namespace BOTC
                 return false;
             }
         }
-
-
     }
 }

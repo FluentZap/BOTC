@@ -8,6 +8,7 @@
 
       @foreach(Classes classType in Model)
       {
-        <p><a asp-controller="Bandit" asp-action="Show" asp-route-id="@classType.Id"> @classType.Name</a></p>
+        <p><a asp-controller="class" asp-action="Show" asp-route-id="@classType.Id"> @classType.Name</a></p>
       }
 </div>
+<a asp-controller="class" asp-action="new"> Create a new Class</a>

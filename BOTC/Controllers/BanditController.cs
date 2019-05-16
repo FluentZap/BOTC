@@ -16,14 +16,17 @@ namespace BanditsOfTheCoast.Solution.Controllers
           User user = IdCheck.Check(HttpContext.Session.Id);
           if (user == null) return RedirectToAction("Index", "User", new {errorcode = 1});
 
-          List<Bandit> bandits = DB.GetAll();
+          List<Bandit> bandits = DB.GetAll(HttpContext.Session.Id);
+          ViewBag.UserTitle = user.UserName;
           return View(bandits);
         }
 
         public IActionResult New()
         {
+          ViewBag.Classes = DB.GetAllClasses();
           User user = IdCheck.Check(HttpContext.Session.Id);
           if (user == null) return RedirectToAction("Index", "User", new {errorcode = 1});
+          ViewBag.UserTitle = user.UserName;
           return View("New");
         }
 
@@ -32,6 +35,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
           User user = IdCheck.Check(HttpContext.Session.Id);
           if (user == null) return RedirectToAction("Index", "User", new {errorcode = 1});
           string id = DB.CreateBandit(banditName, HttpContext.Session.Id, int.Parse(banditClass));
+          ViewBag.UserTitle = user.UserName;
           return RedirectToAction("Show", new { id = id });
         }
 
@@ -40,6 +44,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
         {
           User user = IdCheck.Check(HttpContext.Session.Id);
           if (user == null) return RedirectToAction("Index", "User", new {errorcode = 1});
+          ViewBag.UserTitle = user.UserName;
           return View(DB.GetBandit(id));
         }
 

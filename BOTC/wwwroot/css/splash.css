@@ -14,3 +14,8 @@ width: 100%;
   margin: 15% 5%;
   position: relative;
 }
+
+.userTitle {
+  float: right;
+  padding: 0;
+}

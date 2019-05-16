@@ -10,11 +10,12 @@ namespace BOTC
   {
 
     //Database Calls
-    public static List<Bandit> GetAll()
+    public static List<Bandit> GetAll(string sessionId)
     {
       using(var db = new BOTCContext())
       {
-        var bandits = db.Bandit.Include("Class").ToList();
+        var user = db.User.Where(b => b.SessionId == sessionId).FirstOrDefault();
+        var bandits = db.Bandit.Where(b => b.User == user).Include("Class").ToList();
         return bandits;
       }
     }

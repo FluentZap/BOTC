@@ -16,6 +16,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
           User user = IdCheck.Check(HttpContext.Session.Id);
           if (user == null) return RedirectToAction("Index", "User", new {errorcode = 1});
           List<Item> items = DB.GetAllItem();
+          ViewBag.UserTitle = user.UserName;
           return View(items);
         }
 
@@ -23,6 +24,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
         {
           User user = IdCheck.Check(HttpContext.Session.Id);
           if (user == null) return RedirectToAction("Index", "User", new {errorcode = 1});
+          ViewBag.UserTitle = user.UserName;
           return View();
         }
 
@@ -42,6 +44,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
           weapon.AttackRange = int.Parse(attackRange);
 
           string id = DB.CreateWeapon(item, weapon);
+          ViewBag.UserTitle = user.UserName;
           return RedirectToAction("Show", new { id = id });
         }
 
@@ -52,6 +55,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
           if (user == null) return RedirectToAction("Index", "User", new {errorcode = 1});
           ViewBag.Item = DB.GetItem(id);
           ViewBag.ItemStats = DB.GetItemStats(ViewBag.Item.Type_Id.ToString(), ViewBag.Item.Type);
+          ViewBag.UserTitle = user.UserName;
           return View();
         }
 
@@ -60,6 +64,7 @@ namespace BanditsOfTheCoast.Solution.Controllers
           User user = IdCheck.Check(HttpContext.Session.Id);
           if (user == null) return RedirectToAction("Index", "User", new {errorcode = 1});
           DB.DeleteItem(itemId);
+          ViewBag.UserTitle = user.UserName;
           return RedirectToAction("Index");
         }
 
